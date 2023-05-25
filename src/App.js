@@ -4,13 +4,13 @@ import Router from './Config/router';
 import store from './Store';
 import { Provider } from 'react-redux';
 // Component.
-import Header from './Component/Header';
+// import Header from './Component/Header';
 
 const App = () => {
   return (
     <>
       <Provider store={store}>
-        <Header />
+        {/* <Header /> */}
         <Router />
       </Provider>
     </>
