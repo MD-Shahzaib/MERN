@@ -5,12 +5,12 @@ import Header from '../Component/Header';
 
 const Home = () => {
 
-    const theme = useSelector(state => state.theme)
+    const theme = useSelector(state => state.themeReducer.theme)
     console.log("home.js theme =>", theme);
     return (
         <>
             <Header />
-            <div style={{ color: "black", background: theme }}>Home</div>
+            <div className='screen-layout' style={{ background: theme }}>Home</div>
         </>
     )
 }

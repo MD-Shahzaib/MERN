@@ -1,7 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { setTheme, removeTheme } from '../Store/Actions/themeActions'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 
 const Header = () => {
     const dispatch = useDispatch()
@@ -25,11 +25,11 @@ const Header = () => {
                                 <Link className="nav-link" to="/contact">Contact</Link>
                             </li>
                         </ul>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <button className="btn btn-primary" onClick={() => dispatch(setTheme('red'))} ></button>
-                            <button className="btn btn-primary" onClick={() => dispatch(setTheme('green'))} ></button>
-                            <button className="btn btn-primary" onClick={() => dispatch(setTheme('blue'))} ></button>
-                            <button className="btn btn-primary" onClick={() => dispatch(removeTheme())} ></button>
+                        <div className="d-flex justify-content-between align-items-center bg-light p-2 w-25 rounded">
+                            <button className="btn btn-danger rounded-circle" onClick={() => dispatch(setTheme('#dc3545'))} >R</button>
+                            <button className="btn btn-success rounded-circle" onClick={() => dispatch(setTheme('#198754'))} >G</button>
+                            <button className="btn btn-primary rounded-circle" onClick={() => dispatch(setTheme('#0d6efd'))} >B</button>
+                            <button className="btn btn-dark rounded-circle" onClick={() => dispatch(removeTheme())} >D</button>
                         </div>
                     </div>
                 </div>

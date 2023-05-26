@@ -1,0 +1,8 @@
+.screen-layout {
+    color: black;
+    width: 50vw;
+    height: 50vh;
+    border: 2px solid gray;
+    margin: 10% auto;
+    text-align: center;
+}

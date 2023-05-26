@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import Header from '../Component/Header';
 
 const Contact = () => {
-    const theme = useSelector(state => state.theme)
+    const theme = useSelector(state => state.themeReducer.theme)
     console.log("Contact.js theme =>", theme);
     return (
         <>
             <Header />
-            <div style={{ color: "black", background: theme }} >Contact</div>
+            <div className='screen-layout' style={{ background: theme }} >Contact</div>
         </>
     )
 }
