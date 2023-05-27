@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import themeReducer from './Reducers/themeReducer'
-// import userReducer from './Reducers/userReducers'
+import counterReducer from './Reducers/counterReducer';
 
 const reducers = combineReducers({
     themeReducer,
-    // userReducer
+    counterReducer
 })
 
 export default reducers;

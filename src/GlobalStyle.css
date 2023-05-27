@@ -1,8 +1,7 @@
 .screen-layout {
-    color: black;
-    width: 50vw;
-    height: 50vh;
-    border: 2px solid gray;
-    margin: 10% auto;
-    text-align: center;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
 }

@@ -1,19 +1,22 @@
-// import React, { useState } from 'react'
-// import { setCount } from '../Store/Actions/counterAction';
-// import { useDispatch } from 'react-redux';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement } from '../Store/Actions/counterAction';
 
-// const Counter = () => {
-//     const [counter, setCounter] = useState(0)
-//     const dispatch = useDispatch();
-//     return (
-//         <>
-//             <div className='border m-5 p-5 text-center'>
-//                 <button className="btn btn-primary" onClick={() => dispatch(setCount('red'))}>+</button>
-//                 <span className='border mx-5 rounded p-1'>{counter}</span>
-//                 <button className="btn btn-primary" onClick={() => dispatch(setCount('green'))}>-</button>
-//             </div>
-//         </>
-//     )
-// }
+const Counter = () => {
 
-// export default Counter;
+    const dispatch = useDispatch();
+    const count = useSelector(state => state.counterReducer.count)
+
+    return (
+        <>
+            <div className='border rounded w-50 p-3 text-center bg-light'>
+                <h2 className="mb-3 p-2 bg-dark rounded text-light">REDUX-COUNTER</h2>
+                <button className="btn btn-primary" onClick={() => dispatch(increment(count + 1))}>Increment (+)</button>
+                <span className='mx-3 p-2 bg-dark rounded-circle text-light'>{count}</span>
+                <button className="btn btn-primary" onClick={() => dispatch(decrement(count - 1))}>Decrement (-)</button>
+            </div>
+        </>
+    )
+}
+
+export default Counter;

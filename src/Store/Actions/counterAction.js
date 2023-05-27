@@ -1,19 +1,18 @@
-// function setCount(count) {
-//     console.log("this is counterAction", count);
-//     return {
-//         type: "SET_COUNT",
-//         data: count
-//     };
-// };
+function increment(count) {
+    return {
+        type: "INCREMENT",
+        data: count
+    };
+};
 
-// function removeCount(count) {
-//     return {
-//         type: "REMOVE_COUNT",
-//         data: count
-//     };
-// };
+function decrement(count) {
+    return {
+        type: "DECREMENT",
+        data: count
+    };
+};
 
-// export {
-//     setCount,
-//     removeCount
-// };
+export {
+    increment,
+    decrement
+};

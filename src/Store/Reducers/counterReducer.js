@@ -1,12 +1,9 @@
-// const counterReducer = (state = {}, action) => {
-//     console.log("this is counterReducer", state);
+const reducer = (state = {}, action) => {
+    switch (action.type) {
+        case "INCREMENT": return { ...state, count: action.data };
+        case "DECREMENT": return { ...state, count: action.data };
+        default: return state;
+    };
+};
 
-//     switch (action.type) {
-//         case "SET_COUNT": return { ...state, count: action.data };
-//         case REMOVE_COUNT: return {};
-//         default: return state;
-//     };
-
-// };
-
-// export default counterReducer;
+export default reducer;
