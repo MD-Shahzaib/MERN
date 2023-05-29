@@ -1,8 +1,8 @@
+// Router-Components.
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+// Screens.
 import Home from "../Screens/Home";
 import About from "../Screens/About";
-import Contact from "../Screens/Contact";
 
 const router = createBrowserRouter([
     {
@@ -12,11 +12,7 @@ const router = createBrowserRouter([
     {
         path: "/about",
         element: <About />,
-    },
-    {
-        path: "/contact",
-        element: <Contact />,
-    },
+    }
 ]);
 
 export default function Router() {

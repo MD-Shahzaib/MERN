@@ -1,3 +1,4 @@
+// Redux.
 import { useSelector } from 'react-redux';
 // Component.
 import Header from '../Component/Header';

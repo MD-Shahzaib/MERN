@@ -24,10 +24,8 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/contact">Contact</Link>
-                            </li>
                         </ul>
+                        {/* USER-BOX */}
                         <div className='border p-2 me-2 rounded'>
                             <span className='bg-light rounded p-2 mx-4'>{isUser ? isUser : "No User"}</span>
                             {!isUser ?
@@ -36,12 +34,15 @@ const Header = () => {
                                 <button className="btn btn-primary" onClick={() => dispatch(removeUser())}>LOGOUT</button>
                             }
                         </div>
+                        {/* USER-BOX */}
+                        {/* THEME-BOX */}
                         <div className="d-flex justify-content-between align-items-center bg-light p-2 w-25 rounded">
                             <button className="btn btn-danger rounded-circle" onClick={() => dispatch(setTheme('#dc3545'))} >R</button>
                             <button className="btn btn-success rounded-circle" onClick={() => dispatch(setTheme('#198754'))} >G</button>
                             <button className="btn btn-primary rounded-circle" onClick={() => dispatch(setTheme('#0d6efd'))} >B</button>
                             <button className="btn btn-dark rounded-circle" onClick={() => dispatch(removeTheme())} >D</button>
                         </div>
+                        {/* THEME-BOX */}
                     </div>
                 </div>
             </nav>

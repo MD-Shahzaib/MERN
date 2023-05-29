@@ -3,10 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement } from '../Store/Actions/counterAction';
 
 const Counter = () => {
-
     const dispatch = useDispatch();
     const count = useSelector(state => state.counterReducer.count)
-
     return (
         <>
             <div className='border rounded w-50 p-3 text-center bg-light'>
