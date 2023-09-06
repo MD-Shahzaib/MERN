@@ -24,6 +24,9 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/map">Map</Link>
+                            </li>
                         </ul>
                         {/* USER-BOX */}
                         <div className='border p-2 me-2 rounded'>

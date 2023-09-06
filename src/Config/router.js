@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Screens.
 import Home from "../Screens/Home";
 import About from "../Screens/About";
+import Map from "../Screens/Map";
 
 const router = createBrowserRouter([
     {
@@ -12,14 +13,18 @@ const router = createBrowserRouter([
     {
         path: "/about",
         element: <About />,
+    },
+    {
+        path: "/map",
+        element: <Map />,
     }
 ]);
 
 export default function Router() {
     return (
         <RouterProvider router={router} />
-    )
-}
+    );
+};
 
 
 
